@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:hfa/components/logo.dart';
-import 'package:hfa/components/my_button.dart';
-import 'package:hfa/components/my_textfield.dart';
-import 'package:hfa/components/square_tile.dart';
-import 'package:hfa/services/auth_service.dart';
+import 'package:get/get.dart';
+import 'package:hfa/common/components/square_tile.dart';
 
-class LoginPage extends StatefulWidget {
-  LoginPage({super.key});
+import 'controller.dart';
+
+class SignInPage extends GetView<SignInController> {
+  SignInPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage> {
   //text editing controller
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
+  @override
+  Widget build(BuildContext context) {
   //sign user in method
-  void signUserIn() async {
+    void signUserIn() async {
 
     // show loading circle
     showDialog(
@@ -31,60 +28,7 @@ class _LoginPageState extends State<LoginPage> {
         );  
       },
     );
-
-    // // try sign in
-    //   try {
-    //     await FirebaseAuth.instance.signInWithEmailAndPassword(
-    //         email: emailController.text,
-    //         password: passwordController.text,
-    //     );
-    //     // pop the loading circle
-    //     Navigator.pop(context);
-    //   } on FirebaseAuthException catch (e){
-    //     // pop the loading circle
-    //     Navigator.pop(context);
-    //     // Wrong Email
-    //     if (e.code == 'user-not-found') {
-    //       // show error to user
-    //       wrongEmailMessage();
-    //     }
-    //
-    //     //Wrong Password
-    //     else if (e.code == 'wrong-password') {
-    //       // show error to user
-    //       wrongPasswordMessage();
-    //     }
-    //   }
   }
-
-  // Wrong Email pop up
-
-  // void wrongEmailMessage(){
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) {
-  //       return const AlertDialog(
-  //         title: Text('Incorrect Email!'),
-  //       );
-  //     },
-  //   );
-  // }
-  //
-  // // Wrong Password pop up
-  //
-  // void wrongPasswordMessage(){
-  //   showDialog(
-  //     context: context,
-  //     builder: (context) {
-  //       return const AlertDialog(
-  //         title: Text('Incorrect Password!'),
-  //       );
-  //     },
-  //   );
-  // }
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.grey[300],
       body: SafeArea(
@@ -94,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 50),
 
               //logo
-              Image.asset('lib/images/HFA.png', height: 200,),
+              Image.asset('assets/images/HFA.png', height: 200,),
 
               const SizedBox(height: 25),
 
@@ -134,8 +78,8 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   //google button
                   SquareTile(
-                      onTap: () => AuthService().signInWithGoogle(),
-                      imagePath: 'lib/images/google.png'
+                      onTap: () => controller.signInWithGoogle(),
+                      imagePath: 'assets/images/google.png'
                   ),
                 ],
               ),
@@ -148,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                   //apple button
                   SquareTile(
                       onTap: () {},
-                      imagePath: 'lib/images/apple.png'
+                      imagePath: 'assets/images/apple.png'
                   ),
                 ],
               ),

@@ -87,4 +87,5 @@ class DefaultFirebaseOptions {
     authDomain: 'health-for-all-f7c3f.firebaseapp.com',
     storageBucket: 'health-for-all-f7c3f.appspot.com',
   );
+
 }

@@ -19,15 +19,15 @@ class SquareTile extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border.all(color: Colors.white),
           borderRadius: BorderRadius.circular(16),
-          color: imagePath == 'lib/images/google.png' ? Colors.grey[100] : Colors.black,
+          color: imagePath == 'assets/images/google.png' ? Colors.grey[100] : Colors.black,
         ),
         // child: Image.asset(imagePath, height: 40,),
         child: Row(
           children: [
-            if (imagePath == 'lib/images/google.png') Image.asset(imagePath, height: 40,)
+            if (imagePath == 'assets/images/google.png') Image.asset(imagePath, height: 40,)
             else Image.asset(imagePath, height: 40,),
             const SizedBox(width: 10,),
-            if (imagePath == 'lib/images/google.png') const Text(
+            if (imagePath == 'assets/images/google.png') const Text(
               "Đăng nhập bằng Google!",
               style: TextStyle(
                 color: Colors.black,
