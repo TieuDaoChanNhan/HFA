@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "766556321385",
+    "project_id": "health-for-all-f7c3f",
+    "storage_bucket": "health-for-all-f7c3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766556321385:android:c02ec189c6b44d1a6e94f8",
+        "android_client_info": {
+          "package_name": "com.example.hfa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766556321385-ef9eie3kdsfa6sulein1r34qa39icv6d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hfa",
+            "certificate_hash": "b195490df12dd1a5bd6afbbf110dfb5dfb7c35bf"
+          }
+        },
+        {
+          "client_id": "766556321385-up1r7gbdkiirjkhshmagtt02tib8sal9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPdS4KxRKi4U-BHQiKOSEHXcAEA9gpM0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766556321385-up1r7gbdkiirjkhshmagtt02tib8sal9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
